@@ -1,0 +1,715 @@
+#assigning data to variable 
+a <- 1        #int value
+b <- "abc"    #char value
+c <- 12.3     #float value
+d <- 2+4i     #complex value
+e <- TRUE     #Boolean value
+f <- (a+c)    #sum of two variable
+g <- (a+5)    #sum of variable and int
+as <- c(12,23,15,124,534) # vector 
+as[[1]]
+as[[2]]
+ads <- c(12,24,56,"ad",4+4i,TRUE)
+ads
+s <- c("ABC","L","FRE","LLL")
+s
+print(s)
+paste(s)
+paste0(s)
+
+
+#vector= can only contain object of the same atomic class.It can be created with the help of c() function
+asdf <- c(12,23,15,19,90)
+asdf[[4]] # kindly note that the vector start with index 1 and not index 0
+  
+#List=
+suchi <- list(1,"Amit",TRUE,3,FALSE,"swapnil","neha")
+[[1]]
+suchi.[1]  
+suchi
+suchi[[1]] # list can be accessed by using index.
+print(suchi)
+list_data <- list(1,2,"a","f",4+23i,5.34,TRUE,c(3,4,5,6))
+print(list_data)
+
+list_data <- list(c("Jan","Feb","Mar"),matrix(c(1,2,3,4,-5,-6),nrow = 2),list("Red",-12.3))
+names(list_data) <- c("1st Quarter","A_Matrix","Inner_List")
+print(list_data)
+print(list_data[1])
+print(list_data[2])
+print(list_data[3])
+print(list_data[3][[1]])
+list_data[4] <- "New_element"
+print(list_data)
+list_data[4] <- NULL
+print(list_data)
+list_data[3] <- "Updated Element!!!"
+print(list_data)
+print(list_data[4])
+list1 <- list(1,2,3)
+list2 <- list("Sun","Mon","Tue")
+Merged.list <- c(list1,list2)
+print(Merged.list)
+
+list1 <- list(1:5)
+list2 <- list(10:14)
+print(list1)
+print(list2)
+
+v1 <- unlist(list1)
+v2 <- unlist(list2)
+
+print(v1)
+print(v2)
+
+result <- v1+v2
+print(result)
+
+v <- 5:13
+print(v)
+
+v <- 6.6:12.6
+print(v)
+
+v <- 3.8:11.4
+print(v)
+
+s <- seq(5,9,by=0.4)
+print(s)
+
+s <- c("Green","Apple",5,TRUE)
+print(s)
+
+t <- c("Sun","Mon","Tue","Wed","Thru","Fri","Sat")
+u <- t[c(2,3,6)]
+print(u)
+
+v <- t[c(TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE)]
+print(v)
+
+
+v1 <- c(3,8,4,5,0,11)
+v2 <- c(4,11,0,8,1,2)
+
+add.vector <- v1+v2
+print(add.vector)
+
+sub.vector <- v1-v2
+print(sub.vector)
+
+multi.vector <- v1*v2
+print(multi.vector)
+
+div.vector <- v1/v2
+print(div.vector)
+
+v1 <- c(3,8,4,5,0,11)
+v2 <- c(4,11)
+
+add.result <- v1+v2
+print(add.result)
+
+sub.result <- v1-v2
+print(sub.result)
+
+#vector Element sorting
+v <- c(3,8,4,5,0,11,-9,43)
+sort_result <- sort(v)
+print(v)
+print(sort_result)
+
+rev_sort_result <- sort(v,decreasing = TRUE)
+print(rev_sort_result)
+
+v <- c("RED","BLUE","YELLLOW","VIOLET","BLACK")
+sort.result <- sort(v)
+print(sort.result)
+
+revsort.result <- sort(v,decreasing = TRUE)
+print(revsort.result)
+
+
+##MATRIX
+
+M <- matrix(c(3:14),nrow=4,byrow = TRUE)
+print(M)
+
+N <- matrix(c(3:14),nrow = 4,byrow = FALSE)
+print(N)
+
+rownames <- c("row1","row2","row3","row4")
+colnames <- c("col1","col2","col3")
+P <- matrix(c(3:14),nrow = 4,byrow = TRUE,dimnames = list(rownames,colnames))
+print(P)
+
+
+print(P[1,3])
+print(P[4,2])
+print(P[5,3])
+print(P[2,])
+print(P[,3])
+
+
+matrix1 <- matrix(c(3,9,-1,4,2,6),nrow=2)
+print(matrix1)
+
+matrix2 <- matrix(c(5,2,0,9,3,4),nrow = 2)
+print(matrix2)
+
+result <- matrix1+matrix2
+cat("Result of addition of 2 matrix","\n")
+print(result)
+
+result <- matrix1-matrix2
+cat("Result of subtraction of 2 matrix","\n")
+print(result)
+
+result <- matrix1*matrix2
+cat("Result of multiplication of 2 matrix","\n")
+print(result)
+
+result <- matrix1/matrix2
+cat("Result of Division of 2 matrix","\n")
+print(result)
+
+
+vector1 <- c(5,9,3)
+vector2 <- c(10,11,12,13,14,15)
+
+column.names <- c("col1","col2","col3")
+row.names <- c("row1","row2","row3")
+matrix.names <- c("Matrix1","Matrix2")
+
+result <- array(c(vector1,vector2),dim=c(3,3,2),dimnames=list(row.names,column.names,matrix.names))
+print(result)
+
+print(result[3,,2])
+print(result[1,3,1])
+print(result[,,2])
+
+data <- c("East","West","North","East","West","North","East","West","North","East","West","North")
+print(data)
+print(is.factor(data))
+
+factor_data <- factor(data)
+print(factor_data)
+print(is.factor(factor_data))
+
+
+height <- c(132,151,162,139,166,147,122)
+weight <- c(48,49,66,53,67,52,40)
+gender <- c("male","female","male","female","male","female","male")
+
+input_data <- data.frame(height,weight,gender)
+print(input_data)
+
+print(is.factor(input_data$gender))
+print(input_data$gender)
+
+
+##DATA_FRAME
+
+emp.data <- data.frame(
+  emp_id = c(1:5),
+  emp_name = c("Rick","Dan","Tom","Dick","Harry"),
+  Salary = c(623.3,515.2,611.3,725.5,846.2),
+  start_date = as.Date(c("2012-01-01","2013-02-03","2014-09-13","2015-04-04","2016-12-12")),
+  stringsAsFactors = FALSE)
+
+print(emp.data)
+str(emp.data)
+print(summary(emp.data))
+result <- data.frame(emp.data$emp_name,emp.data$Salary)
+print(result)
+
+result <- emp.data[1:2,]
+print(result)
+
+result <- emp.data[c(3,5),c(2,4)]
+print(result)
+
+#add column
+emp.data$dept <- c("IT","Operations","IT","HR","Finance")
+v <- emp.data
+print(v)
+
+#Add rows
+emp.newdata <- data.frame(
+  emp_id = c(6:8),
+  emp_name = c("A","B","C"),
+  Salary = c(578.2,557.3,687.5),
+  start_date = as.Date(c("2013-01-21","2014-04-16","2021-05-03")),
+  dept = c("IT","Operation","Fianance"),
+  stringsAsFactors = FALSE)
+
+print(emp.newdata)
+
+emp.finaldata <- rbind(emp.data,emp.newdata)
+print(emp.finaldata)
+
+
+##CSV-File 
+
+print(getwd())
+setwd("C:/CDAC - DBDA/Course data/R_Programming/04 R Programming/Datasets/")
+print(getwd())
+
+data <- read.csv("Orders.csv")
+print(data)
+
+print(is.data.frame(data))
+print(nrow(data))
+print(ncol(data))
+
+retval <-  subset(data, Payment.Terms == "Cash")
+print(retval)
+
+info <- subset(data,Place.of.Shipment=="Ahmednagar" & Payment.Terms=="Cash")
+print(info)
+
+write.csv(retval,"output.csv")
+newdata <- read.csv("output.csv")
+print(newdata)
+
+##--------------------------------------------------------------------------------------------
+setwd("C:/CDAC - DBDA/Course data/R_Programming/04 R Programming/Datasets")
+#lab_Excercise_1
+#1.Subset the dataset Orders in the folder datasets to create a dataset with only “Online” payment.
+data <- read.csv("Orders.csv")
+data
+new_data <- subset(data,Payment.Terms=="Online")
+print(new_data)
+
+##--------------------------------------------------------------------------------------------
+#2.Consider the dataset Cars93. Output (write) the data set into a csv file 
+#and name the csv file as mtcars.csv.
+data <- read.csv2("Cars93.csv",header = TRUE, sep = ",",dec = ".")
+write.csv(data,"mtcars.csv")
+mtcars <- read.csv("mtcars.csv")
+#print(mtcars)
+print(mtcars,10)
+
+##--------------------------------------------------------------------------------------------
+#3. Consider the dataset diamonds in the folder datasets. 
+#Subset the dataset with criteria as cut=Premium and color=J.
+
+data <- read.csv2("Diamonds.csv")
+print(data)
+new_diamonds <- subset(data,cut=="Premium" & color=="J")
+print(new_diamonds)
+
+##--------------------------------------------------------------------------------------------
+#4. Consider the dataset diamonds in the folder datasets. 
+#Create a data frame object which stores just variables carat,color, depth and price.
+data <- read.csv2("Diamonds.csv")
+Diamonds_data.frame <- data.frame(data$carat,data$color,data$depth,data$price)
+print(Diamonds_data.frame)
+
+##--------------------------------------------------------------------------------------------
+#5.Consider the dataset mtcars. Choose the 2nd, 18th, 30th and 12th rows
+
+data <- read.csv("mtcars.csv")
+print(data)
+new_data =data[c(2,12,18,30),]
+print(new_data)
+
+##--------------------------------------------------------------------------------------------
+
+##FUNCTIONS
+
+#sequence inbuilt fun
+print(seq(32,44))
+
+#mean inbuilt fun
+print(mean(25:82))
+
+#sum inbult fun
+print(sum(41:68))
+
+#User defined function
+new.function <- function(a){
+  for(i in 1:a) {
+    b <- i^2
+    print(b)
+  }
+  }
+#calling the function
+new.function(7)
+
+#calling the function w/o arguement
+new.function <- function(){
+  for (i in 1:5) {
+    b <- i^2
+    print(b)
+  }
+}
+new.function()
+
+#calling a function with arguements values(by position and by name)
+new.function <- function(a,b,c){
+  result <- a*b+c
+  print(result)
+}
+
+new.function(5,3,11)#by position
+
+new.function(a=11,b=5,c=3)#by names
+
+new.function <- function(a=6,b=9){
+  result <- a*b
+  print(result)
+}
+new.function()
+new.function(9,5)
+
+##--------------------------------------------------------------------------------------------
+#Lab Exercise_2
+#1. Create a function which accepts a number as temperature in degrees Fahrenheit and returns
+#the temperature in Celsius
+function_temp_convertor <- function(a){
+  C <- ((a-32)*(5/9))
+  print(C)
+}
+
+function_temp_convertor(100)
+
+##--------------------------------------------------------------------------------------------
+#2.Create a function which accepts a numeric variable(input)and outputs its coefficient of
+#variation with formula: (SD / mean) *100
+
+function_COV <- function(a){
+  SD <- sd(a,na.rm = TRUE)
+  AVG <- mean(a,na.rm = TRUE)
+  cv <- (SD/AVG)*100
+  print(cv)
+}
+function_COV(mtcars$Price)
+
+##--------------------------------------------------------------------------------------------
+#3. Create a function which can impute the missing values in a numeric vector by mean. 
+#That means, the function should take a numeric vector as an argument and return a numeric
+#vector in which NA values will be found imputed.
+a <- c(5,5,69,2,8,5,2,6,4,NA,NA,NA,58,7,4,1,3,9,6,5,7,1,0,3,6,NA,NA)
+print(a)
+fun_imputemean <- function(a){
+  AVG <- mean(a,na.rm = TRUE)
+  IMPUTED_LIST <- ifelse(is.na(a),AVG,a)
+  print(AVG)
+  print(IMPUTED_LIST)
+  
+}
+fun_imputemean(a)
+
+##--------------------------------------------------------------------------------------------
+
+##DATES
+
+dt1 <- as.Date("1970-01-01")
+class(dt1)
+unclass(dt1)
+
+dt1 <- as.Date("2015-10-23")
+unclass(dt1)
+
+#current_date
+dt1 <- Sys.Date()
+dt1
+unclass(dt1)
+
+dt2 <- as.Date("2017-12-12")
+format(dt2,"%d %B %Y")
+format(dt2,"%d-%b-%Y")
+format(dt2,"%A,%d-%B-%Y")
+
+#Strptime()
+dft <- "20,October 2015 13:30:34"
+dfy <- strptime(dft,"%d, %B %Y %H:%M:%S")
+dfy
+class(dfy)
+
+#sequence of dates
+TransDate <- seq(from=as.Date("2017-02-25"),by="week",length.out=30)
+TransDate
+
+dt2 <- as.Date("2016-02-12")
+dt3 <- as.Date("2016-01-03")
+dt2-dt3
+
+dt3+5
+
+#POSIXct
+dt1 <- Sys.time()
+dt1
+dt_ct <- as.POSIXct(dt1)
+dt_ct
+class(dt_ct)
+unclass(dt_ct)
+
+#POSIXlt
+dt1 <- Sys.time()
+dt_lt <- as.POSIXlt(dt1)
+dt_lt
+unclass(dt_lt)
+p <- names(unclass(dt_lt))
+p
+dt_lt$sec
+dt_lt$hour
+dt_lt$year
+
+##Tidyverse
+
+install.packages("tidyverse")
+library(tidyverse)
+
+dd <- as_tibble(mtcars)
+class(dd)
+dd
+
+##Arranging
+tbl_Cars <- read.csv("Cars93.csv")
+ord_Model <- arrange(tbl_Cars, Model)  
+ord_Model
+
+ord_mnf_mdl <- arrange(tbl_Cars, Manufacturer, Model)
+ord_mnf_mdl
+
+ord_mnf_mdl <- arrange(tbl_Cars,Manufacturer,desc(Model))
+ord_mnf_mdl
+
+##Selecting
+
+select(tbl_Cars,1:3)
+select(tbl_Cars,Model:Max.Price)
+select(tbl_Cars,ends_with("Price"))
+select(tbl_Cars,starts_with("MPG"))
+
+#subsetting/filtering
+filter(tbl_Cars,Type=="Small")
+filter(tbl_Cars,Type=="Small"&Max.Price<10)
+filter(tbl_Cars,Manufacturer %in% c("Acura","Audi"))
+
+##Renaming 
+rename(tbl_Cars,Maximum=Max.Price, Minimum=Min.Price)
+
+##Mutate/adding column
+tbl_Cars_rng <- mutate(tbl_Cars,Price_Range=Max.Price-Min.Price,ratio=Weight/Passengers)
+tbl_Cars_rng
+
+##Summarizing 
+summarize(tbl_Cars, avg_Price=mean(Price,na.rm=TRUE),sd_engSize=sd(EngineSize,na.rm=TRUE))
+
+
+##Grouping
+by_Air_Origin <- group_by(tbl_Cars,Origin,AirBags)
+by_Air_Origin
+summarise(by_Air_Origin,avg_Price=mean(Price,na.rm=TRUE),sd_engSize=sd(EngineSize,na.rm=TRUE))
+
+##pipelining the data operation
+#instead of 
+filter(select(tbl_Cars,Model,Price,Type),Type=="Small")
+
+#we can type
+tbl_Cars%>%
+  select(Model,Price,Type)%>%
+  filter(Type=="Small")
+
+#Considering 
+x1 <- 1:5
+x2 <- 2:6
+
+#Instead of 
+sqrt(sum(x1-x2)^2)
+
+#we can type
+(x1-x2)^2%>%sum()%>%sqrt()
+
+###Joins
+
+#1.Inner join
+install.packages("dplyr")
+library(dplyr)
+
+A <- data.frame(IdNum=c(1:5),A=c(234,134,145,653,246))
+A
+B <- data.frame(IdNum=c(1,2,3,6,7),B=c(200,100,1444,400,160))
+B
+inner_join(A, B, by="IdNum")
+
+#Left_join
+left_join(A,B,by="IdNum")
+
+#Right_join
+right_join(A,B,by="IdNum")
+
+#full_join
+full_join(A,B,by="IdNum")
+
+##Tidyr
+#Gathering 
+
+install.packages("tidyr")
+library(tidyr)
+table4a
+table4b
+table4a %>% gather('1999','2000',key = "year", value = "cases")
+table4b %>% gather('1999','2000',key = "year", value = "population")
+
+#Spreading
+table2
+spread(table2,key = "type",value = "count")
+
+#Seprate
+table3
+table3 %>% separate(rate, into = c("Cases", "Population"),sep = "/", convert = TRUE)
+
+table3 %>% separate(year, into = c("century","year"),sep=2)
+
+#Unite
+table5
+table3
+table5 %>% unite(new,century,year,sep = "")
+
+#==============================================
+#ggplot
+
+
+setwd("C:/CDAC - DBDA/Course data/R_Programming/04 R Programming/Datasets")
+library(tidyverse)
+library(ggplot2)
+
+#Lab_ques1.
+AutoCollision <- read.csv("AutoCollision.csv")
+ggplot(AutoCollision,aes(x=Severity,y=Claim_Count,color=Vehicle_Use))+geom_point()+labs(title="Severity by Claim_count")
+
+#Lab-ques2.
+ggplot(AutoCollision,aes(x=Vehicle_Use,y=Claim_Count,fill=Vehicle_Use))+geom_boxplot()+labs(title = "Claim Count by vehicel type")
+
+#Lab-ques3.
+Ornstein <- read.csv("Ornstein.csv")
+ggplot(Ornstein,aes(x=nation,fill=sector))+geom_bar()+labs(title = "Firms by Nation across Sector")  
+
+#Lab-Ques4.
+ggplot(Ornstein,aes(x=assets,y=interlocks,color=sector))+geom_point()+facet_grid(.~nation)+labs(title = "Assets by Interlock")
+
+#Lab-Ques5.
+data("mtcars")
+mtcars$gear <- factor(mtcars$gear)
+ggplot(mtcars,aes(x=disp,y=mpg,color=gear))+geom_point()+labs(title = "Displacement by MPG",x="Displacement",y="Miles per Gallons")
+
+# ======================================================
+setwd("C:/Training/Academy/R Course (C-DAC)/Datasets/")
+
+a <- c(45, 20, 14)
+barplot(a)
+barplot(a ,col="blue")
+b <- c(40, 20, 10)
+ab <- rbind(a,b)
+barplot(ab)
+barplot(ab, beside = T, col = c("red","blue"))
+
+
+cars93 <- read.csv("Cars93.csv")
+diamonds <- read.csv2("Diamonds.csv")
+barplot(table(cars93$Type), main = "Car Types")
+barplot(table(cars93$Type,cars93$Origin), beside = T)
+
+# Histogram
+hist(cars93$Price, breaks = 10)
+hist(diamonds$price, breaks = 10, col="violetred1")
+hist(diamonds$price, breaks = 10, col= colors()[456])
+
+# Boxplot
+boxplot(cars93$Price)
+boxplot(cars93$Price ~ cars93$Type)
+boxplot(cars93$RPM)
+boxplot(diamonds$price)
+boxplot(diamonds$depth)
+boxplot(diamonds$depth ~ diamonds$cut)
+
+# Scatter Plot
+plot(cars93$Price, cars93$MPG.city)
+plot(cars93$Price, cars93$MPG.city, pch=18, col="skyblue2",
+     xlab = "Car Price", ylab = "Milage per gallon",
+     main = "Scatter")
+
+gasoline <- read.csv("Gasoline.csv")
+plot(gasoline$Week, gasoline$Sales, type = 'l')
+plot(gasoline$Week, gasoline$Sales, type = 'b')
+
+plot(density(cars93$Price))
+hist(cars93$Price)
+
+######### ggplot2 ##################
+library(ggplot2)
+Salaries <- read.csv("Salaries.csv", stringsAsFactors = T)
+
+ggplot(data = Salaries, 
+       aes(x=yrs.service, y=salary))+geom_point()
+
+ggplot(data = Salaries, 
+       aes(x=yrs.service, 
+           y=salary, color=rank))+geom_point()
+
+ggplot(data = Salaries, 
+       aes(x=yrs.service, 
+           y=salary, color=sex))+geom_point()
+
+ggplot(data = Salaries, 
+       aes(x=yrs.service, 
+           y=salary, shape=rank, color=sex))+geom_point()
+
+# Bubble Plot
+ggplot(data = Salaries, 
+       aes(x=yrs.service, 
+           y=salary, size=yrs.since.phd,
+           color=rank))+geom_point(alpha=0.3)
+
+# Gradient Colouring
+ggplot(data = Salaries, 
+       aes(x=yrs.service, 
+           y=salary, color=yrs.since.phd))+geom_point()
+
+# Histogram
+ggplot(data = cars93, aes(x=Price))+
+  geom_histogram(bins = 10, fill="pink", color="red")
+
+ggplot(data = diamonds, aes(x=price))+
+  geom_histogram(bins = 10, fill="pink", color="red")
+
+# Boxplot
+ggplot(data = cars93, aes(y=Price))+
+  geom_boxplot(fill="pink", color="red")
+
+ggplot(data = cars93, aes(y=Price,x=Type,fill=Type))+
+  geom_boxplot()
+
+ggplot(data = cars93, aes(y=Price,x=Type,color=Type))+
+  geom_boxplot()+coord_flip()
+
+# Density
+ggplot(data = cars93, aes(x=Price))+
+  geom_density(fill="pink", color="red")
+
+ggplot(data = cars93, aes(x=Price, fill=Type))+
+  geom_density(alpha=0.3)
+
+# Line Graph
+ggplot(data = gasoline, aes(x=Week, y=Sales)) +
+  geom_point()+geom_line()
+
+### Facet Grid
+
+ggplot(data = Salaries, 
+       aes(x=yrs.service, 
+           y=salary, color=rank))+
+  geom_point()+facet_grid(.~rank)
+
+ggplot(data = Salaries, 
+       aes(x=yrs.service, 
+           y=salary, color=rank))+
+  geom_point()+facet_grid(rank~.)
+
+ggplot(data = Salaries, 
+       aes(x=yrs.service, 
+           y=salary, color=rank))+
+  geom_point()+facet_grid(rank~sex)
